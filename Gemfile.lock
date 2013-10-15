@@ -39,6 +39,10 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     daemons (1.1.9)
+    designmodo-flatuipro-rails (1.1.4.2)
+      jquery-rails (>= 2.2.1)
+      jquery-ui-rails (>= 4.0.3)
+      twitter-bootstrap-rails (>= 2.2.6)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -136,6 +140,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  designmodo-flatuipro-rails
   devise
   figaro
   jquery-rails
