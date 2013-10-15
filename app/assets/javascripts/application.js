@@ -19,5 +19,4 @@
 //= require jquery.ui.effect
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require flatuipro
 //= require_tree .
