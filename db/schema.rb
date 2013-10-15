@@ -11,12 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131015051949) do
+ActiveRecord::Schema.define(:version => 20131015154344) do
 
   create_table "tweets", :force => true do |t|
-    t.string   "text",       :default => "", :null => false
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
+    t.string   "text",              :default => "", :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.string   "query"
+    t.string   "profile_image_url"
+    t.string   "screen_name"
+    t.string   "name"
   end
 
   create_table "users", :force => true do |t|

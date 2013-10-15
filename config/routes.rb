@@ -1,6 +1,7 @@
 StacksocialTwitter::Application.routes.draw do
 
   root :to => "home#index"
+  resource :profiles, only: [:show]
   
   devise_for :users
 
