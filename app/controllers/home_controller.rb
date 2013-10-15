@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
-    #@tweet = Tweet.last
-    #gon.tweet = @tweet
   end
 end
