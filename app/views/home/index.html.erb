@@ -7,7 +7,7 @@
     <% else %>
       <%= text_field_tag "query", nil, :id => "query", :placeholder => "StackSocial" %>
     <% end %>
-    <%= submit_tag "Search" %>
+    <%= submit_tag "Search", :id => "search", :class => "btn btn-info" %>
   <% end %>
   <div class="tweet_list">
     <table class="table span9">
@@ -18,7 +18,7 @@
       </tr>
       <% @tweets.each do |tweet| %>
       <tr>
-        <td nowrap><img src=<%= tweet.user.profile_image_url %>></td>
+        <td class="tweet_user_image" nowrap><img src=<%= tweet.user.profile_image_url %>></td>
         <td class="tweet_user_name" nowrap><%= "@" + tweet.user.screen_name %></td>
         <td class="tweet_text"><%= tweet.text %></td>
         <td class="tweet_time" nowrap><%= tweet.created_at %></td>
