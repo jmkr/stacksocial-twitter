@@ -424,15 +424,15 @@ a:hover {
 }
 h1,
 .h1 {
-  font-size: 62.006px /* 64px */;
+  font-size: 48px /* 64px */;
 }
 h2,
 .h2 {
-  font-size: 51.996px /* 52px */;
+  font-size: 40px /* 52px */;
 }
 h3,
 .h3 {
-  font-size: 39.998000000000005px /* 40px */;
+  font-size: 32px /* 40px */;
 }
 h4,
 .h4 {
@@ -1960,8 +1960,8 @@ input[type="color"]:focus,
 .row-fluid input[type="tel"],
 .row-fluid input[type="color"],
 .row-fluid .uneditable-input {
-  height: 41px;
-  width: 100%;
+  height: 30px;
+  width: 200px;
 }
 textarea.flat,
 input[type="text"].flat,
@@ -6336,4 +6336,26 @@ input.search-query {
 .mhl,
 .mal {
   margin-left: 20px;
+}
+
+input#search {
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+.search_form {
+  display: inline-block;
+  margin-top: 24px;
+ }
+ .search_form h3 {
+  float: left;
+ }
+ .search_form form {
+  float: right;
+  padding-left: 50px;
+ }
+
+footer {
+  margin: 30px 0;
+  padding-left: 40px;
 }

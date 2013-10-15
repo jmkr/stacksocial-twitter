@@ -1,14 +1,17 @@
 <div class="container">
   <h1>Welcome to the StackSocial Tweet Browser!</h1>
-  <h3> Enter a search phrase to get cookin </h3>
-  <%= form_tag @query, :id => "tweet_query" do %>
-    <% if @query %>
-      <%= text_field_tag "query", nil, :id => "query", :placeholder => @query %>
-    <% else %>
-      <%= text_field_tag "query", nil, :id => "query", :placeholder => "StackSocial" %>
+  
+  <div class="search_form">
+    <h3 class="title"> Enter a search phrase to get cookin </h3>
+    <%= form_tag @query, :id => "tweet_query" do %>
+      <% if @query %>
+        <%= text_field_tag "query", nil, :id => "query", :placeholder => @query %>
+      <% else %>
+        <%= text_field_tag "query", nil, :id => "query", :placeholder => "StackSocial" %>
+      <% end %>
+      <%= submit_tag "Search", :id => "search", :class => "btn btn-info" %>
     <% end %>
-    <%= submit_tag "Search", :id => "search", :class => "btn btn-info" %>
-  <% end %>
+  </div>
   <div class="tweet_list">
     <table class="table span9">
       <tr>

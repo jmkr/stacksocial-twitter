@@ -42,7 +42,7 @@
         <div class="navbar-inner">
 
           <div class="container-fluid">
-            <a class="brand" href="/">StacksocialTwitter</a>
+            <a class="brand" href="/">StackSocialTwitter</a>
             <div class="container-fluid nav-collapse">
               <div id="user_nav">
                 <ul class="nav pull-right">
@@ -78,6 +78,19 @@
         </div>
       </div><!--/row-->
     </div> <!-- /container -->
+
+    <footer class="container">
+      <p>Created by <span>@meekr5</span></p>
+    </footer>
+
+    <script type="text/javascript">
+
+      // Format the user link for each tweet.
+      $("footer p span").each(function () { 
+        var tweetUser = $(this).html();
+        $(this).html(tweetHelper.linkMentions(tweetUser) );
+      });
+    </script>
 
   </body>
   </html>

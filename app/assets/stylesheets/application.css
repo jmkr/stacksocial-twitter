@@ -12,22 +12,6 @@
  *= require_tree .
  */
 
- h1 {
- 	font-size: 48px;
- }
-
- h2 {
- 	font-size: 40px;
- }
-
- h3 {
- 	font-size: 32px;
- }
-input {
-	width: 200px;
-	height: 30px;
-}
-
 .tweet_user_image img {
 	max-width: none;
 }
