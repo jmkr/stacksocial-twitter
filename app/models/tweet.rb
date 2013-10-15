@@ -5,11 +5,9 @@ class Tweet < ActiveRecord::Base
   def self.get_latest
     tweets = Twitter.user_timeline("meekr5")
     tweets.each do |t|
-      created = DateTime.parse(t.created_at)
-      
       # Create and save the tweet if it doesn't already exist.
-      unless Tweet.where(created_at: created).exists?
-        tweet = Tweet.create(:text => t.text, :created_at => created )
+      unless Tweet.where(created_at: t.created_at).exists?
+        tweet = Tweet.create(:text => t.text, :created_at => t.created_at)
         tweet.save
        end
     end
