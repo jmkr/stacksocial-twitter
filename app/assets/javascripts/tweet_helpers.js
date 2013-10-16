@@ -15,7 +15,7 @@
             if (hashes != null) {
                 for (_i = 0, _len = hashes.length; _i < _len; _i++) {
                     hash = hashes[_i];
-                    url = '<a href="?query=' + hash.replace("#", "") + '">' + hash + '</a>';
+                    url = '<a href="?tweet_query=' + hash.replace("#", "") + '">' + hash + '</a>';
                     text = text.replace(hash, url);
                 }
             }
@@ -29,7 +29,7 @@
                 for (_i = 0, _len = mentions.length; _i < _len; _i++) {
                     mention = mentions[_i];
                     username = mention.replace("@", "");
-                    url = '@<a href="/profiles?user_name=' + username + '">' + username + '</a>';
+                    url = '<a href="/profiles?user_name=' + username + '">@' + username + '</a>';
                     text = text.replace(mention, url);
                 }
             }
@@ -49,7 +49,6 @@
         },
 
         timeAgo: function(dateString){
-            console.log(dateString);
             var rightNow = new Date();
             var then = new Date(dateString); 
             var diff = rightNow - then;
