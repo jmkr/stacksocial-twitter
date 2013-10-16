@@ -15,7 +15,7 @@
             if (hashes != null) {
                 for (_i = 0, _len = hashes.length; _i < _len; _i++) {
                     hash = hashes[_i];
-                    url = '<a href="?tweet_query=' + hash.replace("#", "") + '">' + hash + '</a>';
+                    url = '<a href="/?tweet_query=' + hash.replace("#", "") + '">' + hash + '</a>';
                     text = text.replace(hash, url);
                 }
             }
