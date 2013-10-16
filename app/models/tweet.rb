@@ -15,7 +15,7 @@ class Tweet < ActiveRecord::Base
 
   # Connect to the Twitter API and fetch the latest 20 tweets for the given search term, excluding retweets.
   def self.get_latest_for_query(query)
-    unless query.nil? || query.empty?
+    if query
       search_results = client.search(query + " -rt", :count => 20, :result_type => "recent")
       search_results.statuses.each do |t|
         # Create and save the tweet if it doesn't already exist for the given query.

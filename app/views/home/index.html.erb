@@ -3,11 +3,11 @@
   
   <div class="search_form">
     <h3 class="title"> Enter a search phrase to get cookin </h3>
-    <%= form_tag @query, :id => "tweet_query" do %>
+    <%= form_tag do %>
       <% if @query %>
-        <%= text_field_tag "query", nil, :id => "query", :placeholder => @query %>
+        <%= text_field_tag "tweet_query", nil, :id => "query", :placeholder => @query %>
       <% else %>
-        <%= text_field_tag "query", nil, :id => "query", :placeholder => "StackSocial" %>
+        <%= text_field_tag "tweet_query", nil, :id => "query", :placeholder => "StackSocial" %>
       <% end %>
       <%= submit_tag "Search", :id => "search", :class => "btn btn-info" %>
     <% end %>
